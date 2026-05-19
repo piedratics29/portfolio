@@ -1,9 +1,11 @@
+import { Suspense, lazy } from 'react';
 import Navbar from './components/Navbar.jsx';
 import Hero from './components/Hero.jsx';
-import About from './components/About.jsx';
-import Skills from './components/Skills.jsx';
-import Projects from './components/Projects.jsx';
-import Contact from './components/Contact.jsx';
+
+const About = lazy(() => import('./components/About.jsx'));
+const Skills = lazy(() => import('./components/Skills.jsx'));
+const Projects = lazy(() => import('./components/Projects.jsx'));
+const Contact = lazy(() => import('./components/Contact.jsx'));
 
 function App() {
   return (
@@ -11,14 +13,16 @@ function App() {
       <Navbar />
       <main>
         <Hero />
-        <div className="light-theme transition-colors duration-700">
-          <About />
-        </div>
-        <Skills />
-        <div className="light-theme transition-colors duration-700">
-          <Projects />
-        </div>
-        <Contact />
+        <Suspense fallback={<div className="min-h-screen bg-bg" />}>
+          <div className="light-theme transition-colors duration-700">
+            <About />
+          </div>
+          <Skills />
+          <div className="light-theme transition-colors duration-700">
+            <Projects />
+          </div>
+          <Contact />
+        </Suspense>
       </main>
       <footer className="border-t border-border py-12 px-6 md:px-10 flex flex-col md:flex-row justify-between items-center gap-6">
         <div className="flex flex-col items-center md:items-start">

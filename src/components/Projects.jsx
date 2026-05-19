@@ -65,6 +65,7 @@ function ScreenshotsModal({ project, index, onClose, onPrev, onNext, onSelect })
           </button>
           <div className="flex-1 flex items-center justify-center h-full">
             <img 
+              loading="lazy"
               src={activeShot.src} 
               alt={activeShot.label} 
               className="max-h-full max-w-full object-contain shadow-lg"
@@ -90,7 +91,7 @@ function ScreenshotsModal({ project, index, onClose, onPrev, onNext, onSelect })
                 className={`w-12 h-12 flex-shrink-0 border-2 transition-all ${shotIndex === index ? 'border-border' : 'border-transparent opacity-50 hover:opacity-100'}`}
                 onClick={() => onSelect(shotIndex)}
               >
-                <img src={shot.src} alt="" className="w-full h-full object-cover" />
+                <img loading="lazy" src={shot.src} alt="" className="w-full h-full object-cover" />
               </button>
             ))}
           </div>
@@ -117,6 +118,7 @@ function ProjectGrid({ items, startIndex = 0, onOpenScreens }) {
           {/* Background Image */}
           {project.image && (
             <img 
+              loading="lazy"
               src={project.image} 
               alt={project.title} 
               className="absolute inset-0 w-full h-full object-cover transition-all duration-700 group-hover:scale-110 group-hover:blur-md group-hover:brightness-50"

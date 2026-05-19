@@ -72,7 +72,9 @@ export default function Hero() {
           <img 
             src={profileImage} 
             alt="Rose Piedra Singco" 
-            className="w-full h-full object-cover object-top grayscale transition-transform duration-[2s] group-hover:scale-105"
+            fetchpriority="high"
+            decoding="async"
+            className="w-full h-full object-cover object-top grayscale transition-all duration-[2s] group-hover:scale-105 group-hover:grayscale-0"
           />
           
           <div className="absolute inset-x-0 bottom-0 p-4 md:p-8 flex flex-col">
