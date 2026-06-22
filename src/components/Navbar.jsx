@@ -64,6 +64,15 @@ export default function Navbar() {
             {link.label}
           </motion.a>
         ))}
+        <a
+          href={`${import.meta.env.BASE_URL}Rose-Piedra-Singco-Resume.pdf`}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hover:opacity-50 transition-opacity"
+          onClick={() => setOpen(false)}
+        >
+          Resume
+        </a>
       </nav>
     </header>
   );

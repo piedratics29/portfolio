@@ -1,6 +1,13 @@
 import SectionShell from './SectionShell.jsx';
 
 export default function Contact() {
+  const resumeFile = `${import.meta.env.BASE_URL}Rose-Piedra-Singco-Resume.pdf`;
+  const localTime = new Date().toLocaleTimeString('en-US', {
+    timeZone: 'Asia/Manila',
+    hour: '2-digit',
+    minute: '2-digit',
+  });
+
   return (
     <SectionShell id="contact" title="Get in Touch" muted>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20">
@@ -14,6 +21,14 @@ export default function Contact() {
             <span className="eyebrow !mb-0">Inquiries</span>
             <a className="text-2xl md:text-3xl font-bold tracking-tight border-b border-border w-fit hover:opacity-50 transition-opacity" href="mailto:rosepiedrasingco123@gmail.com">
               rosepiedrasingco123@gmail.com
+            </a>
+            <a
+              href={resumeFile}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn ghost w-fit mt-2"
+            >
+              View Resume
             </a>
           </div>
         </div>
@@ -33,8 +48,8 @@ export default function Contact() {
           </div>
 
           <div className="mt-auto pt-8 border-t border-bg/20">
-            <p className="text-[10px] uppercase tracking-widest opacity-40">Local Time</p>
-            <p className="text-sm font-bold">{new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })} GMT+8</p>
+            <p className="text-[10px] uppercase tracking-widest opacity-40">Local Time · Philippines</p>
+            <p className="text-sm font-bold">{localTime} GMT+8</p>
           </div>
         </div>
       </div>

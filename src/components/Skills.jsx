@@ -1,10 +1,10 @@
 import SectionShell from './SectionShell.jsx';
 
 const groups = [
-  { title: 'Frontend', items: ['HTML5', 'CSS3', 'JavaScript', 'SASS', 'Bootstrap'] },
-  { title: 'CMS', items: ['WordPress', 'Elementor', 'Custom CSS/JS'] },
-  { title: 'Backend', items: ['Django', 'Python'] },
-  { title: 'Others', items: ['Git', 'Basic React', 'Figma (UI implementation / design-to-code conversion)'] },
+  { title: 'Frontend', items: ['HTML5', 'CSS3', 'JavaScript ES6+', 'Angular', 'TypeScript', 'React Foundations'] },
+  { title: 'UI & Styling', items: ['Tailwind CSS', 'Bootstrap', 'SASS', 'Flexbox', 'CSS Grid', 'Mobile-First'] },
+  { title: 'CMS & Backend', items: ['WordPress', 'Elementor', 'Theme Customization', 'PHP', 'Django', 'Python'] },
+  { title: 'Workflow', items: ['Git', 'GitHub', 'Agile / Scrum', 'Responsive Design', 'Figma to Code'] },
 ];
 
 export default function Skills() {

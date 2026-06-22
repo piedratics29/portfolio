@@ -26,7 +26,7 @@ function App() {
       </main>
       <footer className="border-t border-border py-12 px-6 md:px-10 flex flex-col md:flex-row justify-between items-center gap-6">
         <div className="flex flex-col items-center md:items-start">
-          <span className="text-[10px] uppercase tracking-widest opacity-40 mb-1">Portfolio / 24</span>
+          <span className="text-[10px] uppercase tracking-widest opacity-40 mb-1">Portfolio / 26</span>
           <span className="text-sm font-bold tracking-tight">Rose Piedra Singco</span>
         </div>
         

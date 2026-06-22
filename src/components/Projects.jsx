@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { AnimatePresence, motion } from 'motion/react';
 import SectionShell from './SectionShell.jsx';
-import { wordpressProjects, frontendProjects } from '../data/projects.js';
+import { wordpressProjects, frontendProjects, personalProjects } from '../data/projects.js';
 
 const cardVariants = {
   hidden: { opacity: 0, y: 16 },
@@ -198,6 +198,22 @@ export default function Projects() {
             <h3 className="text-sm tracking-widest uppercase opacity-60">Frontend / Web Apps</h3>
           </div>
           <ProjectGrid items={frontendProjects} startIndex={wordpressProjects.length} onOpenScreens={openScreens} />
+        </div>
+
+        <div className="project-section mt-16">
+          <div className="section-header px-4 md:px-0 mb-6 flex flex-col items-start gap-2">
+            <h3 className="text-sm tracking-widest uppercase opacity-60">
+              Personal Projects / Single Page Applications
+            </h3>
+            <p className="text-sm opacity-50">
+              Independent concepts and fully responsive SPA builds.
+            </p>
+          </div>
+          <ProjectGrid
+            items={personalProjects}
+            startIndex={wordpressProjects.length + frontendProjects.length}
+            onOpenScreens={openScreens}
+          />
         </div>
       </SectionShell>
 

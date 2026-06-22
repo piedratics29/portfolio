@@ -15,6 +15,7 @@ const item = {
 
 export default function Hero() {
   const profileImage = `${import.meta.env.BASE_URL}my_photo.jpg`;
+  const resumeFile = `${import.meta.env.BASE_URL}Rose-Piedra-Singco-Resume.pdf`;
 
   return (
     <section id="hero" className="relative min-h-screen w-full flex flex-col pt-[80px] md:pt-0">
@@ -34,11 +35,20 @@ export default function Hero() {
               Design
             </motion.h1>
             <motion.p variants={item} className="text-lg md:text-xl font-light tracking-tight max-w-2xl mt-6 opacity-80 leading-snug">
-               I am Rose Piedra Singco, a Frontend Engineer focused on building immersive, high-performance digital products from concept to production.
+               I am Rose Piedra Singco, a Frontend / Web Developer building responsive,
+               user-focused websites and applications from concept to deployment.
             </motion.p>
-            <motion.div variants={item} className="mt-8">
+            <motion.div variants={item} className="mt-8 flex flex-wrap gap-3">
                <a href="#projects" className="inline-block border border-text px-8 py-4 text-xs font-bold uppercase tracking-widest hover:bg-text hover:text-bg transition-colors">
                  Explore Work
+               </a>
+               <a
+                 href={resumeFile}
+                 target="_blank"
+                 rel="noopener noreferrer"
+                 className="inline-block border border-border px-8 py-4 text-xs font-bold uppercase tracking-widest hover:border-text transition-colors"
+               >
+                 View Resume
                </a>
             </motion.div>
           </div>
@@ -50,7 +60,7 @@ export default function Hero() {
             </div>
             <div className="flex flex-col">
               <span className="text-[10px] uppercase tracking-widest opacity-40 mb-1">Experience</span>
-              <span className="text-sm font-bold uppercase tracking-tight">3+ Years</span>
+              <span className="text-sm font-bold uppercase tracking-tight">Nearly 3 Years</span>
             </div>
             <div className="flex flex-col">
               <span className="text-[10px] uppercase tracking-widest opacity-40 mb-1">Status</span>
@@ -81,7 +91,7 @@ export default function Hero() {
              <div className="backdrop-blur-xl bg-black/50 border border-white/20 p-6 w-full">
                <span className="text-[10px] uppercase tracking-[0.2em] font-bold opacity-60 block mb-3 text-white">Capability Snapshot</span>
                <p className="text-white text-sm font-bold uppercase tracking-tight leading-relaxed">
-                 UI Polish, Performance, React, Tailwind, WordPress, Django
+                 Responsive UI, JavaScript, Angular, WordPress, Django
                </p>
              </div>
           </div>

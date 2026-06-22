@@ -93,3 +93,17 @@ export const frontendProjects = [
     action: { label: 'View Screenshots', href: '#', type: 'screens' },
   },
 ];
+
+export const personalProjects = [
+  {
+    title: 'Barangay Malatbo - Official Digital Portal',
+    desc: 'A responsive single-page civic portal for Barangay Malatbo, featuring community services, officials, news, local projects, tourism highlights, and resident feedback tools.',
+    stack: 'Angular Â· TypeScript Â· Tailwind CSS Â· Responsive UI',
+    image: withBase('/malatbo.png'),
+    action: {
+      label: 'View Live Site',
+      href: 'https://barangay-malatbo-website.vercel.app/',
+      type: 'demo',
+    },
+  },
+];
