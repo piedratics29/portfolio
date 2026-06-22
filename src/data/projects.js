@@ -106,4 +106,26 @@ export const personalProjects = [
       type: 'demo',
     },
   },
+  {
+    title: 'AI Content Planner - Content Scheduling Platform',
+    desc: 'An AI-assisted content planning SPA that helps users transform ideas into organized, scheduled posts through a focused planning workflow.',
+    stack: 'Angular Â· TypeScript Â· AI Integration Â· Responsive UI',
+    image: withBase('/ai-content-planner.png'),
+    action: {
+      label: 'View Live Site',
+      href: 'https://ai-content-planner-ochre.vercel.app/login',
+      type: 'demo',
+    },
+  },
+  {
+    title: 'CareerPath - Job Application Tracker',
+    desc: 'A responsive job application tracking SPA for organizing opportunities, monitoring application progress, and keeping a job search workflow in one place.',
+    stack: 'Angular Â· TypeScript Â· Dashboard UI Â· Responsive UI',
+    image: withBase('/job-application-tracker.png'),
+    action: {
+      label: 'View Live Site',
+      href: 'https://job-application-tracker-lac-beta.vercel.app/login',
+      type: 'demo',
+    },
+  },
 ];
