@@ -23,6 +23,12 @@ export default function Contact() {
               rosepiedrasingco123@gmail.com
             </a>
             <a
+              className="text-lg md:text-xl font-bold tracking-tight border-b border-border w-fit hover:opacity-50 transition-opacity"
+              href="tel:+639105059081"
+            >
+              +63 910 505 9081
+            </a>
+            <a
               href={resumeFile}
               target="_blank"
               rel="noopener noreferrer"

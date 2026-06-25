@@ -4,7 +4,7 @@ const groups = [
   { title: 'Frontend', items: ['HTML5', 'CSS3', 'JavaScript ES6+', 'Angular', 'TypeScript', 'React Foundations'] },
   { title: 'UI & Styling', items: ['Tailwind CSS', 'Bootstrap', 'SASS', 'Flexbox', 'CSS Grid', 'Mobile-First'] },
   { title: 'CMS & Backend', items: ['WordPress', 'Elementor', 'Theme Customization', 'PHP', 'Django', 'Python'] },
-  { title: 'Workflow', items: ['Git', 'GitHub', 'Agile / Scrum', 'Responsive Design', 'Figma to Code'] },
+  { title: 'SEO & Workflow', items: ['Technical SEO', 'Meta Tags', 'Image Optimization', 'Lazy Loading', 'XML Sitemaps', 'Page Speed', 'Git', 'GitHub', 'Agile / Scrum'] },
 ];
 
 export default function Skills() {

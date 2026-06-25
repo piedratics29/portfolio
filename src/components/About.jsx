@@ -11,8 +11,9 @@ export default function About() {
           </p>
           <p className="text-lg opacity-60">
             I build projects from scratch, connect frontend experiences with Django
-            backends, and customize WordPress solutions for real client needs. I am
-            currently expanding my frontend toolkit through Angular SPA projects.
+            backends, customize WordPress solutions for real client needs, and apply
+            basic technical SEO and performance best practices. I am currently expanding
+            my frontend toolkit through Angular SPA projects.
           </p>
         </div>
         <div className="md:col-span-5 bg-accent p-8 md:p-10 border border-border">
@@ -33,6 +34,10 @@ export default function About() {
             <li className="flex justify-between items-center border-b border-border pb-2">
               <span className="font-bold text-lg uppercase tracking-tight">Agile Collaboration</span>
               <span className="text-[10px] opacity-40">04</span>
+            </li>
+            <li className="flex justify-between items-center border-b border-border pb-2">
+              <span className="font-bold text-lg uppercase tracking-tight">Technical SEO</span>
+              <span className="text-[10px] opacity-40">05</span>
             </li>
           </ul>
         </div>

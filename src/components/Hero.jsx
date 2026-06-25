@@ -91,7 +91,7 @@ export default function Hero() {
              <div className="backdrop-blur-xl bg-black/50 border border-white/20 p-6 w-full">
                <span className="text-[10px] uppercase tracking-[0.2em] font-bold opacity-60 block mb-3 text-white">Capability Snapshot</span>
                <p className="text-white text-sm font-bold uppercase tracking-tight leading-relaxed">
-                 Responsive UI, JavaScript, Angular, WordPress, Django
+                 Responsive UI, JavaScript, Angular, WordPress, Django, Technical SEO
                </p>
              </div>
           </div>
