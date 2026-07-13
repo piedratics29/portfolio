@@ -54,7 +54,7 @@ export default function About() {
                 <p className="text-base font-medium opacity-70">Dinnox IT Solutions · Cebu, Philippines</p>
               </div>
               <span className="text-xs font-bold uppercase tracking-widest whitespace-nowrap">
-                Aug 2023 — Present
+                Aug 2023 — Feb 2026
               </span>
             </div>
             <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm opacity-70">
