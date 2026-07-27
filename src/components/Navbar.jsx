@@ -73,6 +73,15 @@ export default function Navbar() {
         >
           Resume
         </a>
+        <a
+          href={`${import.meta.env.BASE_URL}Rose-Piedra-Singco-CV.pdf`}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hover:opacity-50 transition-opacity"
+          onClick={() => setOpen(false)}
+        >
+          CV
+        </a>
       </nav>
     </header>
   );

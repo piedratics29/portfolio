@@ -2,6 +2,7 @@ import SectionShell from './SectionShell.jsx';
 
 export default function Contact() {
   const resumeFile = `${import.meta.env.BASE_URL}Rose-Piedra-Singco-Resume.pdf`;
+  const cvFile = `${import.meta.env.BASE_URL}Rose-Piedra-Singco-CV.pdf`;
   const localTime = new Date().toLocaleTimeString('en-US', {
     timeZone: 'Asia/Manila',
     hour: '2-digit',
@@ -35,6 +36,14 @@ export default function Contact() {
               className="btn ghost w-fit mt-2"
             >
               View Resume
+            </a>
+            <a
+              href={cvFile}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn ghost w-fit"
+            >
+              View CV
             </a>
           </div>
         </div>

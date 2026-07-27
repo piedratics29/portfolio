@@ -16,6 +16,7 @@ const item = {
 export default function Hero() {
   const profileImage = `${import.meta.env.BASE_URL}my_photo.jpg`;
   const resumeFile = `${import.meta.env.BASE_URL}Rose-Piedra-Singco-Resume.pdf`;
+  const cvFile = `${import.meta.env.BASE_URL}Rose-Piedra-Singco-CV.pdf`;
 
   return (
     <section id="hero" className="relative min-h-screen w-full flex flex-col pt-[80px] md:pt-0">
@@ -49,6 +50,14 @@ export default function Hero() {
                  className="inline-block border border-border px-8 py-4 text-xs font-bold uppercase tracking-widest hover:border-text transition-colors"
                >
                  View Resume
+               </a>
+               <a
+                 href={cvFile}
+                 target="_blank"
+                 rel="noopener noreferrer"
+                 className="inline-block border border-border px-8 py-4 text-xs font-bold uppercase tracking-widest hover:border-text transition-colors"
+               >
+                 View CV
                </a>
             </motion.div>
           </div>
