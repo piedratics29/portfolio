@@ -6,14 +6,12 @@ export const wordpressProjects = [
     desc: 'Digital marketplace for local businesses, built in Elementor with custom CSS/JS for tighter layouts and UX. Currently in development, preparing for launch.',
     stack: 'WordPress · Elementor · Custom CSS · JavaScript · Theme Customization',
     image: withBase('/shopsmart.png'),
-    action: { label: 'View Demo', href: 'https://shopsmart.net.ph/', type: 'demo' },
   },
   {
     title: 'Jagna Tourism & Community Website',
     desc: 'WordPress site showcasing Jagna, Bohol with tourism highlights and community content for residents and visitors. The website is not publicly accessible yet and requires a password to enter.',
     stack: 'WordPress · Elementor · CSS · JavaScript',
     image: withBase('/jagna.png'),
-    action: { label: 'View Demo', href: 'https://qrn.zkq.temporary.site/website_4cec4bca/', type: 'demo' },
   },
 ];
 
@@ -98,7 +96,7 @@ export const personalProjects = [
   {
     title: 'Barangay Malatbo - Official Digital Portal',
     desc: 'A responsive single-page civic portal for Barangay Malatbo, featuring community services, officials, news, local projects, tourism highlights, and resident feedback tools.',
-    stack: 'Angular Â· TypeScript Â· Tailwind CSS Â· Responsive UI',
+    stack: 'Angular · TypeScript · Tailwind CSS · Responsive UI',
     image: withBase('/malatbo.png'),
     action: {
       label: 'View Live Site',
@@ -109,7 +107,7 @@ export const personalProjects = [
   {
     title: 'AI Content Planner - Content Scheduling Platform',
     desc: 'An AI-assisted content planning SPA that helps users transform ideas into organized, scheduled posts through a focused planning workflow.',
-    stack: 'Angular Â· TypeScript Â· AI Integration Â· Responsive UI',
+    stack: 'Angular · TypeScript · AI Integration · Responsive UI',
     image: withBase('/ai-content-planner.png'),
     action: {
       label: 'View Live Site',
@@ -120,7 +118,7 @@ export const personalProjects = [
   {
     title: 'CareerPath - Job Application Tracker',
     desc: 'A responsive job application tracking SPA for organizing opportunities, monitoring application progress, and keeping a job search workflow in one place.',
-    stack: 'Angular Â· TypeScript Â· Dashboard UI Â· Responsive UI',
+    stack: 'Angular · TypeScript · Dashboard UI · Responsive UI',
     image: withBase('/job-application-tracker.png'),
     action: {
       label: 'View Live Site',

@@ -107,13 +107,13 @@ function ProjectGrid({ items, startIndex = 0, onOpenScreens }) {
       {items.map((project, idx) => (
         <motion.article
           key={project.title}
-          className="relative bg-[#d1d1d1] rounded-3xl overflow-hidden group cursor-pointer h-[500px]"
+          className={`relative bg-[#d1d1d1] rounded-3xl overflow-hidden group h-[500px] ${project.action ? 'cursor-pointer' : ''}`}
           variants={cardVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.1 }}
           custom={startIndex + idx}
-          onClick={() => project.action.type === 'screens' ? onOpenScreens(project) : window.open(project.action.href, '_blank')}
+          onClick={project.action ? () => project.action.type === 'screens' ? onOpenScreens(project) : window.open(project.action.href, '_blank') : undefined}
         >
           {/* Background Image */}
           {project.image && (
@@ -136,9 +136,11 @@ function ProjectGrid({ items, startIndex = 0, onOpenScreens }) {
               <h3 className="text-2xl md:text-[26px] font-medium leading-tight drop-shadow-md">
                 {project.title.split('-')[0].trim()}
               </h3>
-              <span className="text-[11px] opacity-90 whitespace-nowrap mt-1 drop-shadow-sm pointer-events-auto hover:underline transition-opacity">
-                /{project.action.label.replace('View ', '')}
-              </span>
+              {project.action ? (
+                <span className="text-[11px] opacity-90 whitespace-nowrap mt-1 drop-shadow-sm pointer-events-auto hover:underline transition-opacity">
+                  /{project.action.label.replace('View ', '')}
+                </span>
+              ) : null}
             </div>
 
             {/* Bottom Stack Pills */}
