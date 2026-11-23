@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
 
 const links = [
   { label: 'Home', href: '#hero' },
@@ -14,61 +13,68 @@ export default function Navbar() {
 
   useEffect(() => {
     const close = () => setOpen(false);
+    const handleKeyDown = (event) => {
+      if (event.key === 'Escape') close();
+    };
+
     window.addEventListener('scroll', close);
-    return () => window.removeEventListener('scroll', close);
-  }, []);
+    window.addEventListener('keydown', handleKeyDown);
+
+    if (open) document.body.style.overflow = 'hidden';
+
+    return () => {
+      window.removeEventListener('scroll', close);
+      window.removeEventListener('keydown', handleKeyDown);
+      document.body.style.overflow = '';
+    };
+  }, [open]);
 
   return (
-    <header id="top" className="fixed top-0 left-0 w-full z-50 flex justify-between items-center p-4 md:px-8 md:py-5 backdrop-blur-lg bg-bg/70 border-b border-border/50 transition-colors duration-700">
-      <div className="flex flex-col cursor-pointer" onClick={() => window.scrollTo(0,0)}>
-        <span className="text-[10px] uppercase tracking-widest font-bold mb-1 opacity-50">
+    <header id="top" className="fixed top-0 left-0 z-50 flex w-full items-center justify-between border-b border-border/50 bg-bg/70 p-4 backdrop-blur-lg transition-colors duration-700 md:px-8 md:py-5">
+      <div className="flex cursor-pointer flex-col" onClick={() => window.scrollTo(0, 0)}>
+        <span className="mb-1 text-[10px] font-bold uppercase tracking-widest opacity-50">
           Portfolio
         </span>
-        <span className="text-xl md:text-2xl font-bold tracking-tighter leading-none">
+        <span className="text-xl font-bold leading-none tracking-tighter md:text-2xl">
           Rose Piedra
         </span>
       </div>
+
       <button
         type="button"
-        className="md:hidden flex flex-col gap-1.5"
-        onClick={() => setOpen((v) => !v)}
+        className="relative z-10 flex h-10 w-10 flex-col items-end justify-center gap-1.5 md:hidden"
+        onClick={() => setOpen((value) => !value)}
+        aria-expanded={open}
+        aria-controls="site-nav"
+        aria-label={open ? 'Close navigation menu' : 'Open navigation menu'}
       >
-        <span className="w-6 h-px bg-text" />
-        <span className="w-6 h-px bg-text" />
+        <span className={`h-px bg-text transition-all duration-300 ${open ? 'w-6 -translate-y-0.5 -rotate-45' : 'w-6'}`} />
+        <span className={`h-px bg-text transition-all duration-300 ${open ? 'w-6 -translate-y-1.5 rotate-45' : 'w-4'}`} />
       </button>
+
       <nav
         id="site-nav"
         className={`${
           open
-            ? 'fixed inset-0 bg-bg z-50 flex flex-col items-center justify-center gap-8'
-            : 'hidden md:flex gap-8 items-center'
-        } text-[11px] uppercase tracking-widest font-semibold`}
+            ? 'absolute left-0 right-0 top-full flex max-h-[calc(100vh-5rem)] flex-col items-center gap-7 overflow-y-auto border-t border-border bg-bg px-6 py-8 shadow-2xl'
+            : 'hidden md:flex md:items-center md:gap-8'
+        } text-[11px] font-semibold uppercase tracking-widest`}
       >
-        {open && (
-           <button 
-             className="absolute top-10 right-10 text-2xl" 
-             onClick={() => setOpen(false)}
-           >
-             ×
-           </button>
-        )}
         {links.map((link) => (
-          <motion.a
+          <a
             key={link.href}
             href={link.href}
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.9 }}
-            className="hover:opacity-50 transition-opacity"
+            className="transition-opacity hover:opacity-50"
             onClick={() => setOpen(false)}
           >
             {link.label}
-          </motion.a>
+          </a>
         ))}
         <a
           href={`${import.meta.env.BASE_URL}Rose-Piedra-Singco-Resume.pdf`}
           target="_blank"
           rel="noopener noreferrer"
-          className="hover:opacity-50 transition-opacity"
+          className="transition-opacity hover:opacity-50"
           onClick={() => setOpen(false)}
         >
           Resume
@@ -77,7 +83,7 @@ export default function Navbar() {
           href={`${import.meta.env.BASE_URL}Rose-Piedra-Singco-CV.pdf`}
           target="_blank"
           rel="noopener noreferrer"
-          className="hover:opacity-50 transition-opacity"
+          className="transition-opacity hover:opacity-50"
           onClick={() => setOpen(false)}
         >
           CV
